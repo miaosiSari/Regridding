@@ -4,7 +4,7 @@ Replicate "Regridding reconstruction algorithm for real-time tomographic imaging
 
 ## Code Structure
 
-The code starts with gridrec_radon.m. The gridrec.m is now depricated.
+The code starts with gridrec_radon.m. The gridrec.m is now deprecated.
 
 The program test_fft_slice.m is a verifaction of the [Fourier Slice Theorem](https://en.wikipedia.org/wiki/Projection-slice_theorem)  and is not called in  gridrec_radon.m or gridrec.m.
 
