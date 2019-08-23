@@ -1,8 +1,8 @@
 # Regridding
 
-## Code Structure
-
 Replicate "Regridding reconstruction algorithm for real-time tomographic imaging".
+
+## Code Structure
 
 The code starts with gridrec_radon.m. The gridrec.m is now depricated.
 
