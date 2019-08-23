@@ -4,19 +4,19 @@
 
 Replicate "Regridding reconstruction algorithm for real-time tomographic imaging".
 
-The code starts with $\texttt{gridrec_radon.m}$. The $\texttt{gridrec.m}$ is now depricated.
+The code starts with gridrec_radon.m. The gridrec.m is now depricated.
 
-The program $\texttt{test_fft_slice.m}$ is a verifaction of the [Fourier Slice Theorem](https://en.wikipedia.org/wiki/Projection-slice_theorem)  and is not called in  $\texttt{gridrec_radon.m}$ or $\texttt{gridrec.m}$ .
+The program test_fft_slice.m is a verifaction of the [Fourier Slice Theorem](https://en.wikipedia.org/wiki/Projection-slice_theorem)  and is not called in  gridrec_radon.m or gridrec.m.
 
-$\texttt{calc_psnr_ssim.m}$: It calculates the PSNR and SSIM values between two images. It calls $\texttt{metrix_mse.m}$, $\texttt{metrix_psnr.m}$, $\texttt{metrix_ssim.m}$ and $\texttt{ssim_index.m}$.
+calc_psnr_ssim.m: It calculates the PSNR and SSIM values between two images. It calls metrix_mse.m, metrix_psnr.m, metrix_ssim.m and ssim_index.m.
 
 ## Update Logs
 
 Update Aug 23rd:
 
-We successfully implement $\texttt{gridrec_radon.m}$.. Different from "gridrec.m", it uses Matlab function $\texttt{radon}$ instead of $\texttt{imrotate}$ to do projection. Function $\texttt{radon}$ employs more parallel beams to perform projection, therefore could considerably reduce the artifacts.
+We successfully implement gridrec_radon.m. Different from gridrec.m, it uses Matlab function "radon" instead of "imrotate" to do projection. Function"radon" employs more parallel beams to perform projection, therefore could considerably reduce the artifacts.
 
-In addition, we test the gridrec algorithm on natural images from the GOPRO dataset which is famous for i deblurring.
+In addition, we test the gridrec algorithm on natural images from the GOPRO dataset which is famous for image deblurring.
 
 Currently the problems are:
 
@@ -29,12 +29,26 @@ Currently the problems are:
 
 The high frequency components (near the start and the end) suffers from great loss if the rotation angle is not close to 0 or $\frac{\pi}{2}$.
 
+<img src="images/Central_Slice_Theorem.png" width="400px"/>
+
 ### Verification of the Gridrec Algorithm
 
 Gridrec on the GOPRO image:
 
 PSNR = 32.8999, SSIM = 0.9649.
 
+<img src="images/Gridrec_on_GOPRO.png" width="500px"/>
+
 Gridrec on the Shepp-Logan:
 
 PSNR = 32.2522, SSIM = 0.9646.
+
+<img src="images/Gridrec_on_Shepp_Logan.png" width="500px"/>
+
+## How to run:
+
+1. If you want to verify the Central Slice Theorem, please run test_fft_slice.m.
+
+2. If you want to acquire high quality reconstruction results, please run gridrec_radon.m.
+
+3. If you want to compare the differences between "imrotate" and "radon", please compare gridrec_radon.m with gridrec.m.
