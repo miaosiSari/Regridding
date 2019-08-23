@@ -10,6 +10,7 @@ The program test_fft_slice.m is a verifaction of the [Fourier Slice Theorem](htt
 
 calc_psnr_ssim.m: It calculates the PSNR and SSIM values between two images. It calls metrix_mse.m, metrix_psnr.m, metrix_ssim.m and ssim_index.m.
 
+Kaiser_Bessel_plot.m: Plots the Kaiser_Bessel window. It is based on w_single, w_vector, w_matrix and modified_Bessel.m. It is not called in gridrec.m or gridrec_radon.m.
 ## Update Logs
 
 Update Aug 23rd:
@@ -45,6 +46,9 @@ PSNR = 32.2522, SSIM = 0.9646.
 
 <img src="images/Gridrec_on_Shepp_Logan.png" width="500px"/>
 
+### Visualization of the Kaiser-Bessel Window
+
+<img src="images/Kaiser_Bessel.png" width="300px"/>
 ## How to run:
 
 1. If you want to verify the Central Slice Theorem, please run test_fft_slice.m.
