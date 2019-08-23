@@ -6,7 +6,7 @@ Replicate "Regridding reconstruction algorithm for real-time tomographic imaging
 
 The code starts with gridrec_radon.m. The gridrec.m is now deprecated.
 
-The program test_fft_slice.m is a verifaction of the [Fourier Slice Theorem](https://en.wikipedia.org/wiki/Projection-slice_theorem)  and is not called in  gridrec_radon.m or gridrec.m.
+The program test_fft_slice.m is a verification of the [Fourier Slice Theorem](https://en.wikipedia.org/wiki/Projection-slice_theorem)  and is not called in  gridrec_radon.m or gridrec.m.
 
 calc_psnr_ssim.m: It calculates the PSNR and SSIM values between two images. It calls metrix_mse.m, metrix_psnr.m, metrix_ssim.m and ssim_index.m.
 
