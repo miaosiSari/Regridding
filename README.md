@@ -48,7 +48,7 @@ PSNR = 32.2522, SSIM = 0.9646.
 
 ### Visualization of the Kaiser-Bessel Window
 
-<img src="images/Kaiser_Bessel.png" width="300px"/>
+<img src="images/Kaiser_Bessel.png" width="600px"/>
 ## How to run:
 
 1. If you want to verify the Central Slice Theorem, please run test_fft_slice.m.
