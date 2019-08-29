@@ -13,7 +13,7 @@ calc_psnr_ssim.m: It calculates the PSNR and SSIM values between two images. It 
 Kaiser_Bessel_plot.m: Plots the Kaiser_Bessel window. It is based on w_single, w_vector, w_matrix and modified_Bessel.m. It is not called in gridrec.m or gridrec_radon.m.
 ## Update Logs
 
-Update Aug 23rd:
+Update Aug 23rd, 2019:
 
 We successfully implement gridrec_radon.m. Different from gridrec.m, it uses Matlab function "radon" instead of "imrotate" to do projection. Function"radon" employs more parallel beams to perform projection, therefore could considerably reduce the artifacts.
 
@@ -23,6 +23,11 @@ Currently the problems are:
 
 1. The gridrec algorithm generates blurry results when the resolution is low.
 2. The algorithm is not well parallelized (TODO).
+
+Update Aug 29th, 2019:
+
+1. A bug is fixed (uploading get_window.m).
+2. Add an example of CUDA implementation of Radon Transform (see the folder "gpu/").
 
 ## Experimental Results
 
